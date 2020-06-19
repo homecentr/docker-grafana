@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv ash
+
+cd /usr/share/grafana
+
+exec runas ash /run.sh

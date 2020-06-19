@@ -1,6 +1,9 @@
 version: "3.7"
 services:
-  $$IMAGE_NAME$$:
+  grafana:
     build: .
-    image: homecentr/$$IMAGE_NAME$$
-    restart: unless-stopped
+    image: homecentr/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - ./example:/config
