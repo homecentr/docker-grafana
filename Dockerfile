@@ -1,6 +1,6 @@
 FROM grafana/grafana:7.0.3 as original
 
-FROM homecentr/base:2.4.0-alpine
+FROM homecentr/base:2.4.3-alpine
 
 ENV PATH="/usr/share/grafana/bin:$PATH"
 ENV GF_PATHS_CONFIG="/config/grafana.ini"
@@ -16,7 +16,7 @@ COPY --from=original /run.sh /run.sh
 
 COPY ./fs/ /
 
-RUN apk add --no-cache curl=7.67.0-r0
+RUN apk add --no-cache curl=7.69.1-r0
 
 RUN  mkdir -p "$GF_PATHS_PROVISIONING/datasources" \
              "$GF_PATHS_PROVISIONING/dashboards" \
