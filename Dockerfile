@@ -16,7 +16,7 @@ COPY --from=original /run.sh /run.sh
 
 COPY ./fs/ /
 
-RUN apk add --no-cache curl=7.67.0-r0
+RUN apk add --no-cache curl=7.69.1-r0
 
 RUN  mkdir -p "$GF_PATHS_PROVISIONING/datasources" \
              "$GF_PATHS_PROVISIONING/dashboards" \
