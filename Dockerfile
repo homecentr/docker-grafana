@@ -1,6 +1,6 @@
 FROM grafana/grafana:7.1.1 as original
 
-FROM homecentr/base:2.4.3-alpine
+FROM homecentr/base:3.4.0-alpine
 
 ENV PATH="/usr/share/grafana/bin:$PATH"
 ENV GF_PATHS_CONFIG="/config/grafana.ini"
